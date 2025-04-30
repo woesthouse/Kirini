@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>키보드 정보 - KIRINI</title>
+  <style>
+    body {
+      font-family: 'Pretendard', sans-serif;
+      background: #fffceb;
+      margin: 0;
+      color: #333;
+    }
+
+    header {
+      background: #ffcc80;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1rem 2rem;
+      background: #fff3e0;
+    }
+
+    .filter-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .filter-group label {
+      font-weight: bold;
+      margin-bottom: 0.3rem;
+    }
+
+    .filter-group select,
+    .filter-group input[type=checkbox] {
+      padding: 0.3rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1rem;
+    }
+
+    .card-content h3 {
+      margin-top: 0;
+      color: #ff7043;
+    }
+
+    .card-content p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .tags {
+      margin-top: 0.5rem;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #ffe0b2;
+      color: #444;
+      padding: 0.2rem 0.5rem;
+      margin: 0.2rem;
+      border-radius: 0.5rem;
+      font-size: 0.75rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div style="font-weight:bold; font-size:1.5rem;"><a href="mockup_main.html">🦒</a> KIRINI</div>
+    <nav>
+      <a href="mockup_dictionary.html">용어집</a>
+      <a href="mockup_database.html">키보드정보</a>
+      <a href="mockup_mall.html">쇼핑몰</a>
+    </nav>
+  </header>
+
+  <section class="filters">
+    <div class="filter-group">
+      <label>입력 방식</label>
+      <select>
+        <option>전체</option>
+        <option>기계식</option>
+        <option>무접점</option>
+        <option>멤브레인</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>배열</label>
+      <select>
+        <option>전체</option>
+        <option>풀배열</option>
+        <option>텐키리스</option>
+        <option>미니(60%)</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>연결</label>
+      <select>
+        <option>전체</option>
+        <option>유선</option>
+        <option>무선</option>
+        <option>유무선겸용</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>제조사</label>
+      <select>
+        <option>전체</option>
+        <option>COX</option>
+        <option>Razer</option>
+        <option>AULA</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>스위치</label>
+      <select>
+        <option>전체</option>
+        <option>청축</option>
+        <option>적축</option>
+        <option>갈축</option>
+      </select>
+    </div>
+  </section>
+
+  <section class="cards">
+    <div class="card">
+      <img src="https://via.placeholder.com/300x120" alt="keyboard image" />
+      <div class="card-content">
+        <h3>AULA F108 유무선 기계식</h3>
+        <p>기계식 / 풀배열 / 유무선겸용 / 청축 / AULA / RGB 백라이트 / 내장 배터리</p>
+        <div class="tags">
+          <span class="tag">#배터리내장</span>
+          <span class="tag">#청축</span>
+          <span class="tag">#RGB</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300x120" alt="keyboard image" />
+      <div class="card-content">
+        <h3>COX CMK63R</h3>
+        <p>기계식 / 미니 / 유선 / 적축 / COX / RGB 백라이트</p>
+        <div class="tags">
+          <span class="tag">#작고가벼움</span>
+          <span class="tag">#적축</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

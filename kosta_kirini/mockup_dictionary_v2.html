@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>용어집 - KIRINI</title>
+  <style>
+    body {
+      font-family: 'Pretendard', sans-serif;
+      margin: 0;
+      background: #fffceb;
+      color: #333;
+    }
+
+    header {
+      background: #ffcc80;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 2rem 1rem 0.5rem;
+      color: #ff7043;
+    }
+
+    .description {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #666;
+    }
+
+    .tags {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .tag-btn {
+      background: #ffe0b2;
+      border: none;
+      border-radius: 1rem;
+      padding: 0.4rem 1rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .term-list {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    .term {
+      background: #ffffff;
+      margin-bottom: 1rem;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .term h2 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      color: #ff8a65;
+    }
+
+    .term p {
+      margin: 0.5rem 0 1rem;
+      color: #555;
+    }
+
+    .term .keywords span {
+      display: inline-block;
+      background: #ffecb3;
+      color: #555;
+      padding: 0.2rem 0.6rem;
+      margin-right: 0.4rem;
+      border-radius: 0.5rem;
+      font-size: 0.8rem;
+    }
+
+    footer {
+      margin-top: 3rem;
+      background: #ffe0b2;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div style="font-weight:bold; font-size:1.5rem;"><a href="mockup_main.html">🦒</a> KIRINI</div>
+    <nav>
+      <a href="mockup_dictionary.html">용어집</a>
+      <a href="mockup_database.html">키보드정보</a>
+      <a href="mockup_mall.html">쇼핑몰</a>
+    </nav>
+  </header>
+
+  <h1>📘 키보드 용어 사전</h1>
+  <p class="description">입문자도 쉽게 이해할 수 있는 키보드 용어들을 정리했어요.</p>
+
+  <div class="tags">
+    <button class="tag-btn">#전체</button>
+    <button class="tag-btn">#스위치</button>
+    <button class="tag-btn">#키캡</button>
+    <button class="tag-btn">#배열</button>
+    <button class="tag-btn">#입력방식</button>
+  </div>
+
+  <div class="term-list">
+    <div class="term">
+      <h2>🔤 기계식 키보드</h2>
+      <p>스위치가 각각 독립되어 눌림을 인식하는 키보드. 대표적으로 적축/청축 등이 있다.</p>
+      <div class="keywords">
+        <span>#기계식</span> <span>#스위치</span>
+      </div>
+    </div>
+
+    <div class="term">
+      <h2>🔤 무접점 키보드</h2>
+      <p>스위치가 접점 없이 센서로 입력을 인식하는 방식. 부드러운 타건감으로 유명하다.</p>
+      <div class="keywords">
+        <span>#무접점</span> <span>#정전용량</span>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 KIRINI | 키보드 입문자를 위한 용어사전
+  </footer>
+
+</body>
+
+</html>
