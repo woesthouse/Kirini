@@ -1,21 +1,392 @@
+/* 기본 스타일 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Noto Sans KR', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #f8f9fa;
-}
-h1 {
+    background: #fffceb;
     color: #333;
-    margin: 20px;
+    line-height: 1.6;
 }
-nav {
-    margin: 20px;
+
+h1, h2, h3, h4, h5, h6 {
+    color: #333;
+    margin: 20px 0 10px;
 }
-nav a {
-    color: #007bff;
+
+a {
+    color: #ff7043;
     text-decoration: none;
-    margin-right: 10px;
+    transition: all 0.3s ease;
 }
-nav a:hover {
-    text-decoration: underline;
+
+a:hover {
+    color: #ff9e80;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 헤더 스타일 */
+header {
+    background: #ffcc80;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo a {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #ff7043;
+    transition: width 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.login-btn {
+    background: #ff7043;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.login-btn:hover {
+    background: #ff5722;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* 히어로 섹션 스타일 */
+.hero {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: #fff3e0;
+    background-image: linear-gradient(rgba(255, 243, 224, 0.8), rgba(255, 243, 224, 0.8)), url('../kosta_kirini/img/keyboard-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #ff7043;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-logo {
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 메인 섹션 스타일 */
+.sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem;
+    gap: 1.5rem;
+}
+
+.card {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+    font-size: 1.4rem;
+    color: #ff8a65;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.btn {
+    display: inline-block;
+    background: #ffcc80;
+    color: #333;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background: #ffb74d;
+    transform: scale(1.05);
+}
+
+/* 푸터 스타일 */
+footer {
+    margin-top: 3rem;
+    background: #ffe0b2;
+    color: #555;
+    padding: 2rem 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 50px;
+    height: 2px;
+    background: #ff7043;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: #555;
+}
+
+.footer-section ul li a:hover {
+    color: #ff7043;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+    .sections {
+        flex-direction: column;
+    }
+    
+    .card {
+        margin-bottom: 1rem;
+    }
+    
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    nav {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    nav a {
+        margin: 0.5rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+    }
+}
+
+/* 관리자 페이지 스타일 */
+.admin-panel {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 2rem;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.admin-nav {
+    display: flex;
+    gap: 1rem;
+    background: #f5f5f5;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.admin-nav a {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: #333;
+}
+
+.admin-nav a.active, .admin-nav a:hover {
+    background: #ffcc80;
+}
+
+.admin-section {
+    margin-bottom: 2rem;
+}
+
+/* 게시판 스타일 */
+.board-wrapper {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.board-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.board-nav {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.board-nav a {
+    padding: 0.5rem 1rem;
+    background: #f5f5f5;
+    border-radius: 5px;
+    color: #333;
+}
+
+.board-nav a.active, .board-nav a:hover {
+    background: #ffcc80;
+}
+
+.board-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.board-table th, .board-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.board-table th {
+    background: #ffcc80;
+    color: #333;
+    font-weight: bold;
+}
+
+.board-table tr:hover {
+    background: #fff8e1;
+}
+
+.board-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.board-pagination a {
+    display: inline-block;
+    padding: 0.5rem 0.8rem;
+    border-radius: 5px;
+    background: #f5f5f5;
+    color: #333;
+}
+
+.board-pagination a.active, .board-pagination a:hover {
+    background: #ffcc80;
 }

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>용어집 - KIRINI</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/main.js" defer></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Pretendard', sans-serif;
+      background: #fffceb;
+      color: #333;
+    }
+    header {
+      background: #ffcc80;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    .page-title {
+      background: #fff3e0;
+      padding: 2rem;
+      text-align: center;
+    }
+    .page-title h1 {
+      color: #ff7043;
+      margin-bottom: 1rem;
+    }
+    .search-container {
+      max-width: 600px;
+      margin: 2rem auto;
+      display: flex;
+    }
+    .search-container input {
+      flex: 1;
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+      border-radius: 4px 0 0 4px;
+      font-size: 1rem;
+    }
+    .search-container button {
+      padding: 0.75rem 1.5rem;
+      background: #ff9800;
+      color: white;
+      border: none;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+    }
+    .dictionary-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .dictionary-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .dictionary-table th, .dictionary-table td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+    .dictionary-table th {
+      background: #fff3e0;
+      color: #ff7043;
+    }
+    .term {
+      font-weight: bold;
+      color: #ff7043;
+    }
+    .category {
+      display: inline-block;
+      padding: 0.25rem 0.5rem;
+      background: #ffecb3;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+    footer {
+      margin-top: 2rem;
+      background: #ffe0b2;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .footer-content {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-section {
+      padding: 1rem;
+      min-width: 200px;
+    }
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-section a {
+      color: #555;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="../index.html">🦒 KIRINI</a></div>
+    <nav>
+      <a href="dictionary.html">용어집</a>
+      <a href="keyboard_info.html">키보드정보</a>
+      <a href="board.html">소식/게시판</a>
+      <a href="qna.html">Q&A</a>
+      <a href="shop.html">쇼핑몰</a>
+      <a href="login.html" class="login-btn">로그인</a>
+    </nav>
+  </header>
+
+  <section class="page-title">
+    <h1>🔤 키보드 용어집</h1>
+    <p>키보드 세계에서 사용되는 용어들을 쉽게 이해할 수 있도록 정리했습니다.</p>
+  </section>
+
+  <div class="search-container">
+    <input type="text" id="search-term" placeholder="용어 검색...">
+    <button id="search-btn">검색</button>
+  </div>
+
+  <div class="dictionary-container">
+    <table class="dictionary-table">
+      <thead>
+        <tr>
+          <th>용어</th>
+          <th>카테고리</th>
+          <th>설명</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="term">축(Switch)</td>
+          <td><span class="category">부품</span></td>
+          <td>키보드의 키를 누를 때 작동하는 기계식 부품으로, 클릭감과 타건감을 결정합니다. 대표적으로 청축, 적축, 갈축, 흑축 등이 있습니다.</td>
+        </tr>
+        <tr>
+          <td class="term">키캡(Keycap)</td>
+          <td><span class="category">부품</span></td>
+          <td>키보드 축 위에 장착되는 버튼으로, 손가락으로 직접 누르는 부분입니다. 다양한 재질(ABS, PBT 등)과 프로파일로 제공됩니다.</td>
+        </tr>
+        <tr>
+          <td class="term">PCB</td>
+          <td><span class="category">부품</span></td>
+          <td>Printed Circuit Board의 약자로, 키보드의 전자 회로가 인쇄된 기판입니다. 스위치의 신호를 컴퓨터로 전송하는 역할을 합니다.</td>
+        </tr>
+        <tr>
+          <td class="term">플레이트(Plate)</td>
+          <td><span class="category">부품</span></td>
+          <td>스위치를 고정하고 PCB를 보호하는 금속이나 플라스틱 판입니다. 키보드의 견고함과 타건감에 영향을 줍니다.</td>
+        </tr>
+        <tr>
+          <td class="term">핫스왑(Hot-swap)</td>
+          <td><span class="category">기능</span></td>
+          <td>납땜 없이 스위치를 교체할 수 있는 소켓이 장착된 키보드 형태를 의미합니다. 사용자가 쉽게 스위치를 교체할 수 있습니다.</td>
+        </tr>
+        <tr>
+          <td class="term">ANSI/ISO 배열</td>
+          <td><span class="category">레이아웃</span></td>
+          <td>키보드의 물리적 배열 표준입니다. ANSI는 미국식, ISO는 유럽식 배열을 의미하며 엔터키와 쉬프트 키 모양 등에서 차이가 있습니다.</td>
+        </tr>
+        <tr>
+          <td class="term">루브(Lube)</td>
+          <td><span class="category">커스텀</span></td>
+          <td>키보드 스위치와 스태빌라이저에 윤활제를 발라주는 작업입니다. 소음을 줄이고 부드러운 타건감을 얻을 수 있습니다.</td>
+        </tr>
+        <tr>
+          <td class="term">스태빌라이저(Stabilizer)</td>
+          <td><span class="category">부품</span></td>
+          <td>스페이스바, 엔터키 등 긴 키가 흔들리지 않도록 고정해주는 장치입니다. Cherry, Costar 등 여러 종류가 있습니다.</td>
+        </tr>
+        <tr>
+          <td class="term">텐키리스(TKL)</td>
+          <td><span class="category">형태</span></td>
+          <td>숫자 패드가 없는 80% 크기의 키보드를 의미합니다. 풀사이즈보다 공간을 적게 차지하는 장점이 있습니다.</td>
+        </tr>
+        <tr>
+          <td class="term">QMK/VIA</td>
+          <td><span class="category">소프트웨어</span></td>
+          <td>키보드의 키맵을 커스터마이징할 수 있는 오픈소스 펌웨어(QMK)와 사용자 인터페이스(VIA)입니다. 키를 자유롭게 재배치하거나 매크로를 설정할 수 있습니다.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>KIRINI 소개</h3>
+        <p>키보드 입문자를 위한 종합 정보 사이트</p>
+      </div>
+      <div class="footer-section">
+        <h3>바로가기</h3>
+        <ul>
+          <li><a href="dictionary.html">용어집</a></li>
+          <li><a href="keyboard_info.html">키보드 정보</a></li>
+          <li><a href="board.html">게시판</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>관리자</h3>
+        <ul>
+          <li><a href="admin.html">관리자 페이지</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 KIRINI | 키보드 입문자를 위한 가이드
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('search-btn').addEventListener('click', function() {
+      const searchTerm = document.getElementById('search-term').value.toLowerCase();
+      const rows = document.querySelectorAll('.dictionary-table tbody tr');
+      
+      rows.forEach(row => {
+        const termText = row.querySelector('.term').textContent.toLowerCase();
+        const descriptionText = row.querySelector('td:nth-child(3)').textContent.toLowerCase();
+        
+        if (termText.includes(searchTerm) || descriptionText.includes(searchTerm)) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

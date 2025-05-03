@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>로그인 - KIRINI</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/main.js" defer></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Pretendard', sans-serif;
+      background: #fffceb;
+      color: #333;
+    }
+    header {
+      background: #ffcc80;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    .login-container {
+      max-width: 400px;
+      margin: 4rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .login-title {
+      text-align: center;
+      color: #ff7043;
+      margin-bottom: 1.5rem;
+    }
+    .login-form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: #555;
+    }
+    .login-form input {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+    .login-form input:focus {
+      border-color: #ff9800;
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(255, 152, 0, 0.2);
+    }
+    .remember-me {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+    .remember-me input {
+      margin: 0;
+      margin-right: 0.5rem;
+      width: auto;
+    }
+    .login-button {
+      background: #ff9800;
+      color: white;
+      border: none;
+      padding: 1rem 0;
+      border-radius: 4px;
+      font-size: 1.1rem;
+      width: 100%;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .login-button:hover {
+      background: #ff7043;
+    }
+    .login-options {
+      margin-top: 2rem;
+      text-align: center;
+      color: #666;
+      display: flex;
+      justify-content: space-between;
+    }
+    .login-options a {
+      color: #ff7043;
+      text-decoration: none;
+    }
+    .login-options a:hover {
+      text-decoration: underline;
+    }
+    .social-login {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .social-login p {
+      margin-bottom: 1rem;
+      color: #666;
+      position: relative;
+    }
+    .social-login p::before,
+    .social-login p::after {
+      content: "";
+      display: inline-block;
+      width: 40%;
+      height: 1px;
+      background: #ddd;
+      margin: 0 10px;
+      vertical-align: middle;
+    }
+    .social-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .social-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 1px solid #ddd;
+      background: white;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .social-button:hover {
+      background: #f5f5f5;
+      transform: translateY(-2px);
+    }
+    .signup-prompt {
+      margin-top: 2rem;
+      text-align: center;
+      color: #666;
+    }
+    .signup-prompt a {
+      color: #ff7043;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .signup-prompt a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      margin-top: 2rem;
+      background: #ffe0b2;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .footer-content {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-section {
+      padding: 1rem;
+      min-width: 200px;
+    }
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-section a {
+      color: #555;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="../index.html">🦒 KIRINI</a></div>
+    <nav>
+      <a href="dictionary.html">용어집</a>
+      <a href="keyboard_info.html">키보드정보</a>
+      <a href="board.html">소식/게시판</a>
+      <a href="qna.html">Q&A</a>
+      <a href="shop.html">쇼핑몰</a>
+      <a href="login.html" class="login-btn">로그인</a>
+    </nav>
+  </header>
+
+  <div class="login-container">
+    <h2 class="login-title">로그인</h2>
+    <form class="login-form" id="login-form">
+      <div>
+        <label for="email">이메일</label>
+        <input type="email" id="email" name="email" placeholder="이메일 주소 입력" required>
+      </div>
+      <div>
+        <label for="password">비밀번호</label>
+        <input type="password" id="password" name="password" placeholder="비밀번호 입력" required>
+      </div>
+      <div class="remember-me">
+        <input type="checkbox" id="remember-me" name="remember-me">
+        <label for="remember-me">로그인 상태 유지</label>
+      </div>
+      <button type="submit" class="login-button">로그인</button>
+    </form>
+    
+    <div class="login-options">
+      <a href="#">아이디 찾기</a>
+      <a href="#">비밀번호 찾기</a>
+    </div>
+    
+    <div class="social-login">
+      <p>간편 로그인</p>
+      <div class="social-buttons">
+        <button class="social-button" title="네이버 로그인">
+          <img src="../img/naver_icon.png" alt="네이버" width="24" height="24" onerror="this.src='https://via.placeholder.com/24x24?text=N'">
+        </button>
+        <button class="social-button" title="카카오 로그인">
+          <img src="../img/kakao_icon.png" alt="카카오" width="24" height="24" onerror="this.src='https://via.placeholder.com/24x24?text=K'">
+        </button>
+        <button class="social-button" title="구글 로그인">
+          <img src="../img/google_icon.png" alt="구글" width="24" height="24" onerror="this.src='https://via.placeholder.com/24x24?text=G'">
+        </button>
+      </div>
+    </div>
+    
+    <div class="signup-prompt">
+      <p>아직 계정이 없으신가요? <a href="signup.html">회원가입</a></p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>KIRINI 소개</h3>
+        <p>키보드 입문자를 위한 종합 정보 사이트</p>
+      </div>
+      <div class="footer-section">
+        <h3>바로가기</h3>
+        <ul>
+          <li><a href="dictionary.html">용어집</a></li>
+          <li><a href="keyboard_info.html">키보드 정보</a></li>
+          <li><a href="board.html">게시판</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>관리자</h3>
+        <ul>
+          <li><a href="admin.html">관리자 페이지</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 KIRINI | 키보드 입문자를 위한 가이드
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      
+      // 여기에 실제 로그인 로직을 구현할 수 있습니다
+      // 예시: 유효성 검사
+      if (!validateEmail(email)) {
+        alert('올바른 이메일 형식이 아닙니다.');
+        return;
+      }
+      
+      if (password.length < 6) {
+        alert('비밀번호는 최소 6자 이상이어야 합니다.');
+        return;
+      }
+      
+      // 로그인 요청 처리 (실제로는 서버로 요청을 보내야 함)
+      console.log('로그인 시도:', { email, password: '******' });
+      alert('로그인 기능은 현재 개발 중입니다.');
+      
+      // 성공 시 메인 페이지로 리디렉션 (예시)
+      // window.location.href = '../index.html';
+    });
+    
+    function validateEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email);
+    }
+  </script>
+</body>
+</html>

@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KIRINI - 키보드 입문 사이트</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
   <style>
     body {
       margin: 0;
@@ -58,20 +60,23 @@
       padding: 1rem;
       font-size: 0.9rem;
       color: #555;
-    }
+    } 
   </style>
 </head>
 <body>
   <header>
-    <div style="font-weight:bold; font-size:1.5rem;"><a href="index.html">🦒</a> KIRINI</div>
+    <div class="logo"><a href="index.html">🦒 KIRINI</a></div>
     <nav>
-      <a href="kosta_kirini/mockup_dictionary.html">용어집</a>
-      <a href="kosta_kirini/mockup_database.html">키보드정보</a>
-      <a href="kosta_kirini/mockup_mall.html">쇼핑몰</a>
+      <a href="pages/dictionary.html">용어집</a>
+      <a href="pages/keyboard_info.html">키보드정보</a>
+      <a href="pages/board.html">소식/게시판</a>
+      <a href="pages/qna.html">Q&A</a>
+      <a href="pages/shop.html">쇼핑몰</a>
+      <a href="pages/login.html" class="login-btn">로그인</a>
     </nav>
   </header>
   <section class="hero">
-    <img src="kosta_kirini/img/logo.png" alt="KIRINI Logo" style="width: 300px; border-radius: 50%;" />
+    <img src="img/logo.png" alt="KIRINI Logo" class="hero-logo" />
     <h1>당신의 첫 키보드를 위한 안내서</h1>
     <p>키린이(KIRINI)와 함께 키보드 세계에 입문해보세요</p>
   </section>
@@ -79,18 +84,48 @@
     <div class="card">
       <h2>🔤 용어집</h2>
       <p>축? 키캡? 초보도 쉽게 이해하는 키보드 용어 정리</p>
+      <a href="pages/dictionary.html" class="btn">바로가기</a>
     </div>
     <div class="card">
       <h2>⌨️ 키보드 정보</h2>
       <p>유형별 키보드 특징과 추천 제품 알아보기</p>
+      <a href="pages/keyboard_info.html" class="btn">바로가기</a>
     </div>
     <div class="card">
-      <h2>🛒 쇼핑몰</h2>
-      <p>입문자에게 맞는 가성비 키보드 큐레이션</p>
+      <h2>📋 커뮤니티</h2>
+      <p>키보드 소식, 자유게시판, 익명게시판으로 정보 공유</p>
+      <a href="pages/board.html" class="btn">바로가기</a>
+    </div>
+    <div class="card">
+      <h2>❓ Q&A</h2>
+      <p>키보드에 관한 궁금증을 질문하고 답변받기</p>
+      <a href="pages/qna.html" class="btn">바로가기</a>
     </div>
   </section>
   <footer>
-    © 2025 KIRINI | 키보드 입문자를 위한 가이드
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>KIRINI 소개</h3>
+        <p>키보드 입문자를 위한 종합 정보 사이트</p>
+      </div>
+      <div class="footer-section">
+        <h3>바로가기</h3>
+        <ul>
+          <li><a href="pages/dictionary.html">용어집</a></li>
+          <li><a href="pages/keyboard_info.html">키보드 정보</a></li>
+          <li><a href="pages/board.html">게시판</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>관리자</h3>
+        <ul>
+          <li><a href="pages/admin.html">관리자 페이지</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 KIRINI | 키보드 입문자를 위한 가이드
+    </div>
   </footer>
 </body>
 </html>
